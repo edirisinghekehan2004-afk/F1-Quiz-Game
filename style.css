@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(251, 247, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: sans-serif;
+}
+
+.holder{
+    background-color: rgb(241, 6, 6);
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(54, 52, 52, 0.1);
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* SCREENS */
+.Display{
+    display: none;
+    padding: 2rem;
+    text-align: center;
+}
+
+.Display.active{
+    display: block;
+}
+
+/* START SCREEN */
+#Start-Game h1{
+    color: rgb(75, 70, 70);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+#Start-Game p{
+    color: #090707;
+    margin:30px;
+    font-size: 1.1rem;
+}
+
+.Game-Header{
+    margin-bottom: 1rem;
+}
+
+#F1-Question{
+    color: #060303;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.Game-Information{
+    display: flex;
+    justify-content: space-between;
+    color: #040202;
+    margin-bottom: 10px;
+}
+
+.answers-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.answer-button{
+    background-color: red;
+    color: black;
+    border: 2px solid #e1dfdc;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.answer-button:hover{
+    background-color: rgb(196, 0, 0);
+    border-color: black;
+}
+
+.answer-button.correct{
+    background-color: blue;
+    border-color: rgb(94, 89, 89);
+    color: black;
+}
+
+.answer-button.incorrect{
+    background-color: #ff0000;
+    border-color: rgb(94, 89, 89);
+    color: black;
+}
+
+.progress-bar{
+    height: 10px;
+    background-color: rgb(182, 230, 110);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress{
+    height: 100%;
+    background-color: rgb(4, 75, 4);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* RESULT SCREEN */
+#Score-Display h1{
+    color: #e86a33;
+    margin-bottom: 30px;
+}
+
+.Score-Information{
+    background-color: #f8f0e5;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.Score-Information p{
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#Score-Feedback{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e86a33;
+}
+
+button{
+    background-color: rgb(255, 45, 45);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: #a25533;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width:500px){
+     /* when we hit 500px and below, implement the styles below */
+
+     .Display{
+        padding: 1rem;
+     }
+
+     .Start-Game h1{
+        font-size: 2rem;
+     }
+
+     #F1-Question{
+        font-size: 1.3rem;
+     }
+
+     .answer-button{
+        padding: 12px;
+     }
+
+     button{
+        padding: 12px 24px;
+        font-size: 1rem;
+     }
+}

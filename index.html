@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1 Challenge</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="holder">
+        <div class="Display active" id="Start-Game">
+            <h1>🏎️ Start Your Engines!</h1>
+            <p>Start the quiz and prove you're an F1 champion! 🏆</p>
+            <button id="Start-Button">Start Now</button>
+        </div>
+
+        <div class="Display" id="Game-Display">
+            <div class="Game-Header">
+                <h2 id="F1-Question">Question appears here</h2>
+                <div class="Game-Information">
+                    <p>
+                        Question <span id="current-question">1</span> of <span id="total-questions">10</span>
+                    </p>
+
+                    <p>Score: <span id="score">0</span></p>
+                </div>
+            </div>
+
+            <div id="answers-container" class="answers-container">
+                <!-- Answer buttons will be insterted here from our js code later at some point -->
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+        </div>
+
+        <div id="Score-Display" class="Display">
+            <h1>Game Score</h1>
+            <div class="Score-Information">
+                <p>You scored <span id="Total-Score">0</span> out of <span id="Maximum-Score">10</span></p>
+                <div id="Score-Feedback">Good Job!</div>
+            </div>
+            <button id="Restart-Button">Restart Game</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
